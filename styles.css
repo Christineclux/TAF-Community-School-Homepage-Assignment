@@ -118,7 +118,8 @@ nav li a.active {
 
 .hero h1.hero-content {
   font-size: 35px;
-  color: #161515;
+/*   color: #161515; */
+  color: rgb(10, 80, 60);
   /* color: rgb(32, 32, 221); */
 }
 
