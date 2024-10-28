@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-attachment: fixed;
 }
 
 main {
@@ -98,24 +99,27 @@ nav li a:hover,
 nav li a.active {
   color: lawngreen;
   font-weight: bold;
-  /* border-bottom: 2px solid white; */
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-decoration-color: white;
   text-underline-position: under;
+  /* border-bottom: 2px solid white; */
 }
 
 .hero {
-  margin-top: 70px;
+  margin-top: 10px;
   height: 250px;
   display: flex;
   justify-content: center;
   text-align: center;
-  color: rgb(32, 32, 221);
   font-size: 1.5rem;
   width: 100%;
-  /* align-items: center; */
-  /* color: rgb(1, 247, 185); */
+}
+
+.hero h1.hero-content {
+  font-size: 35px;
+  color: #161515;
+  /* color: rgb(32, 32, 221); */
 }
 
 .hero h1 {
@@ -137,6 +141,105 @@ button:hover {
   background: #ff0000;
 }
 
+/* second section styling*/
+.sec2 {
+  background-color: white;
+  color: black;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 100px;
+  gap: 100px;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.title-sec h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2b4162;
+}
+
+.title-sec h2:nth-child(2) {
+  color: #8b4513;
+}
+
+.title-sec h2:nth-child(3) {
+  color: #ffa500;
+}
+
+.description {
+  margin-top: 10px;
+  line-height: 1.4;
+  color: #333;
+  font-size: 0.8rem;
+  width: 400px;
+}
+
+.apply-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 30px;
+  border: 2px solid #2b4162;
+  border-radius: 5px;
+  color: #2b4162;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  height: 40px;
+  width: 145px;
+  font-size: 13px;
+}
+
+.apply-button:hover {
+  background-color: #365e99;
+  color: white;
+}
+
+.image-sec {
+  flex: 1;
+}
+
+.image-sec img {
+  width: 100%;
+  /* width: 350px; */
+  border-radius: 100px;
+  height: auto;
+  box-shadow: 0 4px 8px red;
+}
+
+.last-test {
+  padding-top: 3px;
+  height: 150px;
+  background-color: rgb(10, 80, 60);
+  text-align: center; 
+}
+
+.last-test p{
+  font-weight: bold;
+}
+
+.move {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  font-size: 11px;
+  gap: 180px;
+}
+
+.left {
+  text-align: left;
+}
+
+.right a {
+  text-align: right;
+  color: white;
+}
+
 .foot {
   position: fixed;
   bottom: 0;
@@ -145,9 +248,9 @@ button:hover {
   background-color: rgb(180, 72, 0);
   color: white;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   font-weight: bolder;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 @media screen and (max-width: 600px) {
@@ -191,12 +294,12 @@ button:hover {
     padding: 5px;
   }
 
-  .hero {
+  /* .hero-content {
     height: 150px;
     font-size: 1.2rem;
-  }
+  } */
 
-  .hero h1 {
+  .hero h1.hero-content {
     font-size: 1.5rem;
   }
 
@@ -211,6 +314,68 @@ button:hover {
   .foot {
     position: fixed;
     margin-top: auto;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .sec2 {
+    flex-direction: column;
+    padding: 10px 90px;
+    gap: 5px;
+    max-width: 600px;
+    gap: 10px;
+  }
+
+  .content,
+  .image-sec {
+    width: 100%;
+  }
+
+  .title-sec h2 {
+    font-size: 1rem;
+  }
+
+  .description {
+    margin-top: 3px;
+    line-height: 1;
+    font-size: 0.4rem;
+  }
+
+  .image-sec img {
+    width: 150px;
+    border-radius: 50px;
+    height: auto;
+    box-shadow: 0 4px 8px red;
+  }
+
+  .image-sec {
+    flex: 1;
+  }
+
+  .last-test p{
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  .last-test{
+    height: 127px;
+  }
+
+  .move {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 10px;
+    gap: 80px;
+  }
+  
+  .left {
+    text-align: left;
+  }
+  
+  .right a {
+    text-align: right;
+    color: white;
   }
 }
 
@@ -245,15 +410,6 @@ button:hover {
     margin-left: 15px;
   }
 
-  .hero {
-    height: 200px;
-    font-size: 1.4rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
   .school-name {
     font-size: 20px;
   }
@@ -261,6 +417,25 @@ button:hover {
   .btn {
     padding: 10px 20px;
   }
+
+  .sec2 {
+    display: flex;
+    padding: 10px 90px; 
+    gap: 5px;
+    max-width: 600px;
+    gap: 5px; 
+  }
+
+  .image-sec img {
+    width: 200px;
+    border-radius: 50px;
+    height: auto;
+    box-shadow: 0 4px 8px red;
+  }
+
+  /* .image-sec {
+    flex: 1;
+  } */
 }
 
 @media screen and (min-width: 900px) {
@@ -276,11 +451,11 @@ button:hover {
 
   .hero {
     height: 300px;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
   }
 
   .school-name {
