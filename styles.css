@@ -249,7 +249,7 @@ button:hover {
   background-color: rgb(180, 72, 0);
   color: white;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 5px;
   font-weight: bolder;
   font-size: 11px;
 }
@@ -316,7 +316,7 @@ button:hover {
   .foot {
     position: fixed;
     margin-top: auto;
-    height: 25px;
+    height: 30px;
     font-size: 10px;
   }
 
